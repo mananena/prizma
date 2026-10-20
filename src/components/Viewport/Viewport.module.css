@@ -1,0 +1,75 @@
+/* empty canvas: a target framed by registration corners instead of a dashed box */
+.empty {
+  position: relative;
+  max-width: 460px;
+  padding: 40px 48px;
+  border-radius: var(--mantine-radius-md);
+  color: var(--mantine-color-dark-1);
+  text-align: center;
+  --c: var(--mantine-color-dark-3);
+  --l: 22px;
+  background:
+    linear-gradient(var(--c), var(--c)) top left / var(--l) 2px,
+    linear-gradient(var(--c), var(--c)) top left / 2px var(--l),
+    linear-gradient(var(--c), var(--c)) top right / var(--l) 2px,
+    linear-gradient(var(--c), var(--c)) top right / 2px var(--l),
+    linear-gradient(var(--c), var(--c)) bottom left / var(--l) 2px,
+    linear-gradient(var(--c), var(--c)) bottom left / 2px var(--l),
+    linear-gradient(var(--c), var(--c)) bottom right / var(--l) 2px,
+    linear-gradient(var(--c), var(--c)) bottom right / 2px var(--l);
+  background-repeat: no-repeat;
+  transition:
+    --c 160ms ease,
+    color 160ms ease;
+}
+
+.empty:hover,
+.empty:focus-visible {
+  --c: var(--gb-accent);
+  color: var(--mantine-color-dark-0);
+}
+
+.emptyTitle {
+  font-family: var(--gb-display);
+  font-size: 22px;
+  line-height: 1.2;
+  color: var(--mantine-color-dark-0);
+  text-shadow: var(--gb-split);
+}
+
+.marks {
+  position: absolute;
+  pointer-events: none;
+}
+
+.marks span {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 0 solid var(--mantine-color-dark-2);
+}
+
+.marks [data-corner='tl'] {
+  left: -20px;
+  top: -20px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+.marks [data-corner='tr'] {
+  right: -20px;
+  top: -20px;
+  border-left-width: 1px;
+  border-bottom-width: 1px;
+}
+.marks [data-corner='bl'] {
+  left: -20px;
+  bottom: -20px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+}
+.marks [data-corner='br'] {
+  right: -20px;
+  bottom: -20px;
+  border-left-width: 1px;
+  border-top-width: 1px;
+}
