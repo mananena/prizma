@@ -1,0 +1,42 @@
+:root {
+  /* channel signals: used only where a colour means a channel */
+  --gb-r: #ff3d5a;
+  --gb-g: #2ee88e;
+  --gb-b: #3f8cff;
+  --gb-accent: var(--mantine-color-magenta-5);
+  /* chromatic aberration: the red/blue split that marks "active" and focus */
+  --gb-split: -1.5px 0 0 var(--gb-r), 1.5px 0 0 var(--gb-b);
+  --gb-display: 'Dela Gothic One', 'Onest Variable', sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--mantine-color-dark-8);
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gb-accent);
+  outline-offset: 1px;
+}
+
+* {
+  scrollbar-color: var(--mantine-color-dark-4) transparent;
+  scrollbar-width: thin;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
