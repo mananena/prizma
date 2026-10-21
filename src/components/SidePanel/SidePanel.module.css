@@ -1,0 +1,23 @@
+.root {
+  overflow: auto;
+  min-height: 0;
+  border-left: 1px solid var(--mantine-color-dark-5);
+  background: var(--mantine-color-dark-7);
+}
+
+.section {
+  padding: 14px 14px 16px;
+  border-bottom: 1px solid var(--mantine-color-dark-6);
+}
+
+.title {
+  color: var(--mantine-color-dark-0);
+}
+
+@media (max-width: 720px) {
+  .root {
+    max-height: 38dvh;
+    border-left: 0;
+    border-top: 1px solid var(--mantine-color-dark-5);
+  }
+}
