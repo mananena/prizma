@@ -1,0 +1,76 @@
+.root {
+  height: 46px;
+  padding: 0 10px 0 14px;
+  border-bottom: 1px solid var(--mantine-color-dark-5);
+  background: var(--mantine-color-dark-7);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-right: 14px;
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* wordmark split into its red and blue channels, slightly out of register */
+.mark {
+  position: relative;
+  font-family: var(--gb-display);
+  font-size: 17px;
+  letter-spacing: 0.01em;
+  color: var(--mantine-color-dark-0);
+  text-shadow: var(--gb-split);
+}
+
+.menuButton {
+  font-weight: 500;
+  color: var(--mantine-color-dark-1);
+}
+
+.menuButton[data-expanded] {
+  background: var(--mantine-color-dark-5);
+  color: var(--mantine-color-dark-0);
+}
+
+.palette {
+  min-width: 190px;
+  justify-content: flex-start;
+  border-color: var(--mantine-color-dark-4);
+  background: var(--mantine-color-dark-8);
+  color: var(--mantine-color-dark-2);
+  font-weight: 400;
+}
+
+.palette :global(.mantine-Button-inner) {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.palette :global(.mantine-Button-section[data-position='right']) {
+  margin-left: auto;
+}
+
+.root {
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+@media (max-width: 720px) {
+  .brand {
+    margin-right: 4px;
+  }
+
+  .menuButton {
+    padding-inline: 8px;
+  }
+
+  .palette {
+    min-width: 0;
+  }
+
+  .paletteText {
+    display: none;
+  }
+}
