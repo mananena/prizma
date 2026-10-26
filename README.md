@@ -55,6 +55,13 @@ src/
 
 Стек: TypeScript, React 19, Vite, Mantine 9, Zustand, Vitest.
 
+## Деплой
+
+Образ — `Dockerfile` в корне: сборка Vite и раздача статики через nginx. Порт берётся из `PORT` (по умолчанию 80), проверка здоровья — `/healthz`.
+
+- **Render:** «New → Blueprint», выбрать репозиторий — настройки возьмутся из `render.yaml` (Docker, бесплатный тариф).
+- **GitHub Pages:** включить «Settings → Pages → Source: GitHub Actions», дальше собирает `pages.yml`.
+
 ## Ограничения
 
 - Полупрозрачные пиксели PNG могут сдвинуться на шаг округления (premultiplied alpha в canvas).

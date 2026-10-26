@@ -1,0 +1,9 @@
+# Render Blueprint: New → Blueprint → select this repo
+services:
+  - type: web
+    name: prizma
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /healthz
+    autoDeploy: true
